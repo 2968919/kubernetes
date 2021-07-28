@@ -16,7 +16,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: assignment3
-        image: assign3acr.azurecr.io/spring-mvc-example:v1
+        image: kbassignmentreg.azurecr.io/spring-mvc-example:v1
         ports:
         - name: http
           containerPort: 80
