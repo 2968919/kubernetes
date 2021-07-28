@@ -39,7 +39,7 @@ public class HomeController {
 	@RequestMapping(value = "/user", method = RequestMethod.POST)
 	public String user(@Validated User user, Model model) {
 		
-		WebClient client = WebClient.create("https://assign3userservice.azurewebsites.net/");
+		WebClient client = WebClient.create("https://kbassignment3.azurewebsites.net/");
 
 
 		User response = client.get().uri("/user?id=" + user.getId())
@@ -54,7 +54,7 @@ public class HomeController {
 	@RequestMapping(value = "/inventory", method = RequestMethod.POST)
 	public String inventory(@Validated User user, Model model) {
 		
-		WebClient client = WebClient.create("https://assign3inventoryservice.azurewebsites.net/");
+		WebClient client = WebClient.create("https://kbassignment3.azurewebsites.net/");
 
 
 		String response = client.get().uri("/inventory?userid=" + user.getId())
